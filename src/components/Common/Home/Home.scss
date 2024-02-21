@@ -1,0 +1,20 @@
+.home-container {
+    @apply py-20 px-4;
+  }
+  
+  .list {
+    @apply ml-4 list-none;
+  }
+  
+  .list li {
+    @apply flex items-center hover:bg-gray-200 p-4 rounded-md cursor-pointer transition-all;
+  }
+  
+  .list li a {
+    @apply text-lg font-medium mr-4 hover:text-blue-600;
+  }
+  
+  .list li p {
+    @apply text-gray-600;
+  }
+  

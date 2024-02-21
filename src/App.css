@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+/* app.css */
+
+/* Form container styles */
+.form-container {
+  @apply max-w-md mx-auto p-6 bg-gray-100 rounded-lg shadow-md;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Input label styles */
+.input-label {
+  @apply block mb-2 font-semibold text-gray-700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input field styles */
+.input-field {
+  @apply w-full  py-2 border rounded-md text-gray-700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Slider value styles */
+.slider-value {
+  @apply block mb-2 text-gray-700;
 }
 
-.App-link {
-  color: #61dafb;
+/* Checkbox label styles */
+.checkbox-label {
+  @apply inline-block mr-2 font-semibold text-gray-700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Checkbox field styles */
+.checkbox-field {
+  @apply mb-2;
+}
+
+/* Submit button styles */
+.submit-button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
 }
