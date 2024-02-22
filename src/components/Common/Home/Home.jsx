@@ -10,6 +10,11 @@ const projects = [
     description: 'Generate Password as your wish',
     link: '/passwordGenerator', // Adjust the path to your project page
   },
+  {
+    title: 'Currency Convetor',
+    description: 'Converts your currency',
+    link: '/CurrencyConverter', // Adjust the path to your project page
+  },
   // Add more projects here
 ];
 
