@@ -15,6 +15,11 @@ const projects = [
     description: 'Converts your currency',
     link: '/CurrencyConverter', // Adjust the path to your project page
   },
+  {
+    title:'pagination',
+    description:"simple pagination",
+    link: '/Pagination'
+  }
   // Add more projects here
 ];
 
