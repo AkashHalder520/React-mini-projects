@@ -1,36 +1,42 @@
-/* app.css */
-
-/* Form container styles */
-.form-container {
-  @apply max-w-md mx-auto p-6 bg-gray-100 rounded-lg shadow-md;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Input label styles */
-.input-label {
-  @apply block mb-2 font-semibold text-gray-700;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* Input field styles */
-.input-field {
-  @apply w-full  py-2 border rounded-md text-gray-700;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Slider value styles */
-.slider-value {
-  @apply block mb-2 text-gray-700;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-/* Checkbox label styles */
-.checkbox-label {
-  @apply inline-block mr-2 font-semibold text-gray-700;
+.card {
+  padding: 2em;
 }
 
-/* Checkbox field styles */
-.checkbox-field {
-  @apply mb-2;
-}
-
-/* Submit button styles */
-.submit-button {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+.read-the-docs {
+  color: #888;
 }
