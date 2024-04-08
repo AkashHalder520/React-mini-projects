@@ -20,4 +20,30 @@
       font-size: 16px; /* Adjust font size as desired */
     }
   }
+  .renderPageno {
+    display: flex; /* Arrange pagination buttons horizontally */
+    justify-content: center; /* Center buttons within the container */
+    margin: 10px 0; /* Add some margin for spacing */
+  }
+  
+  .paginationBtn {
+    border: 1px solid #ddd; /* Add a border around buttons */
+    padding: 5px 10px; /* Provide some padding for content */
+    margin: 0 5px; /* Add spacing between buttons */
+    cursor: pointer; /* Indicate interactivity on hover */
+    background-color: #fff; /* Set default background color */
+    color: #333; /* Set default text color */
+    font-size: 14px; /* Adjust font size as needed */
+    border-radius: 4px; /* Add rounded corners for a smoother look */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
+  
+    &:hover:not(.active) {
+      background-color: #eee; /* Change background color on hover */
+    }
+  
+    &.active {
+      background-color: #4CAF50; /* Set background color for active button */
+      color: white; /* Set text color for active button */
+    }
+  }
   
