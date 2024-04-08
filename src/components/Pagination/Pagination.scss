@@ -1,0 +1,23 @@
+.renderproducts {
+    display: flex; /* Arrange products horizontally */
+    flex-wrap: wrap; /* Allow products to wrap onto multiple lines */
+    justify-content: space-between; /* Distribute products evenly */
+    margin: 0 auto; /* Center the product container horizontally */
+    width: 80%; /* Adjust width as needed */
+  
+    span { /* Style individual product items */
+      margin: 10px; /* Add spacing between products */
+      text-align: center; /* Center product title below the image */
+    }
+  
+    img {
+      max-width: 200px; /* Set a maximum width for product images */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    h2 {
+      margin-top: 5px; /* Add some margin between image and title */
+      font-size: 16px; /* Adjust font size as desired */
+    }
+  }
+  
