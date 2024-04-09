@@ -45,15 +45,14 @@ function Pagination() {
     return (
         <>
             <div className='renderproducts'>
-                {products.length > 0 ? renderProducts() : 'loading......'
-                }
+                {products.length > 0 ? renderProducts() : 'loading......'}
             </div>
             <div className='renderPageno'>
                 {
                     pagenNumber().map((i, key) => {
                         return (
                             <button
-                                className='paginationBtn'
+                                className={i==currentPage? 'paginationBtn active':'paginationBtn'}  
                                 key={key}
                                 onClick={handeClick}
                                 value={i}

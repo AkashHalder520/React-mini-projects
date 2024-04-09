@@ -5,6 +5,7 @@ import Home from "./components/Common/Home/Home";
 import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator";
 import CurrencyConverter from "./components/CurrencyConverter/CurrencyConverter";
 import Pagination from "./components/Pagination/Pagination";
+import EmiCalculator from "./components/EmiCalculator/EmiCalculator";
 
 const AppRoutes = () => (
   <Routes>
@@ -12,6 +13,7 @@ const AppRoutes = () => (
     <Route path="/passwordGenerator" element={<PasswordGenerator />} />
     <Route path="/CurrencyConverter" element={<CurrencyConverter />}/>
     <Route path="/Pagination" element={<Pagination />}/>
+    <Route path="/EmiCalculator" element={<EmiCalculator />}/>
   </Routes>
 );
 

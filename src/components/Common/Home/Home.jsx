@@ -19,6 +19,11 @@ const projects = [
     title:'pagination',
     description:"simple pagination",
     link: '/Pagination'
+  },
+  {
+    title:'Emi Calulator',
+    description:"Emi Calculation",
+    link: '/EmiCalculator'
   }
   // Add more projects here
 ];
