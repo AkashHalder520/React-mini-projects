@@ -2,8 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Pagination.scss";
 function Pagination() {
-	const [products, setProducts] = useState([]);
-	const [currentPage, setCurrentPage] = useState(1);
+	const [ products, setProducts ] = useState([]);
+	const [ currentPage, setCurrentPage ] = useState(1);
 	const fetchProduct = async () => {
 		await fetch("https://dummyjson.com/products?limit=100")
 			.then(res => res.json()).then(resdata => setProducts(resdata?.products));

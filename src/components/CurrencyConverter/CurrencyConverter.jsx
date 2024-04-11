@@ -3,10 +3,10 @@ import { useState } from "react";
 import "./CurrencyConverter.scss";
 import useCurrencyinfo from "./hooks/useCurrencyinfo.jsx";
 function CurrencyConverter() {
-	const [amount, setAmount] = useState(0);
-	const [fromCurrency, setFromCurrency] = useState("usd");
-	const [toCurrency, setToCurrency] = useState("inr");
-	const [convertedAmount, setConvertedAmount] = useState(0);
+	const [ amount, setAmount ] = useState(0);
+	const [ fromCurrency, setFromCurrency ] = useState("usd");
+	const [ toCurrency, setToCurrency ] = useState("inr");
+	const [ convertedAmount, setConvertedAmount ] = useState(0);
 
 	const currencyInfo = useCurrencyinfo(fromCurrency);
 

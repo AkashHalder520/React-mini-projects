@@ -1,5 +1,5 @@
 // Routes.js
-// import React from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Common/Home/Home";
 import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator";
@@ -8,13 +8,13 @@ import Pagination from "./components/Pagination/Pagination";
 import EmiCalculator from "./components/EmiCalculator/EmiCalculator";
 
 const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Home/>} />
-    <Route path="/passwordGenerator" element={<PasswordGenerator />} />
-    <Route path="/CurrencyConverter" element={<CurrencyConverter />}/>
-    <Route path="/Pagination" element={<Pagination />}/>
-    <Route path="/EmiCalculator" element={<EmiCalculator />}/>
-  </Routes>
+	<Routes>
+		<Route path="/" element={<Home/>} />
+		<Route path="/passwordGenerator" element={<PasswordGenerator />} />
+		<Route path="/CurrencyConverter" element={<CurrencyConverter />}/>
+		<Route path="/Pagination" element={<Pagination />}/>
+		<Route path="/EmiCalculator" element={<EmiCalculator />}/>
+	</Routes>
 );
 
 export default AppRoutes;

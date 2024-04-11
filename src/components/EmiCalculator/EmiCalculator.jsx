@@ -3,12 +3,18 @@ import { useState } from "react";
 
 function EmiCalculator() {
 
-	const [cost,setCost]=useState(0);
-	const [interest,setInterst]=useState(0);
-	const [fee,setFee]=useState(1);
-	const [downpayment,setDownPayment]=useState();
-	const [tenure,setTenure]=useState(12);
-	const [emi,setEmi]=useState(0);
+	const [ cost,setCost ]=useState (0);
+	const [ interest,setInterst ]=useState (0);
+	const [ fee,setFee ]=useState (1);
+	const [ downpayment,setDownPayment ]=useState ();
+	const [ tenure,setTenure ]=useState (12);
+	const [ emi,setEmi ]=useState (0);
+	const updateEmi = () => {
+		
+	};
+	const updateDownpayment=() => {
+		
+	};
 	return (
 		<>
 			<div className='title'>EmiCalculator</div>
@@ -18,7 +24,7 @@ function EmiCalculator() {
 				name="" 
 				id="" 
 				value={cost} 
-				onChange={(event)=>setCost(event.target.value)}
+				onChange={(event) => setCost (event.target.value)}
 				placeholder='Please enter the total cost of the asset'
 			/>
 
@@ -28,7 +34,7 @@ function EmiCalculator() {
 				name="" 
 				id="" 
 				value={interest} 
-				onChange={(event)=>setInterst(event.target.value)}
+				onChange={(event) => setInterst (event.target.value)}
 				placeholder='Interest Rates in percentage'
 			/>
 
@@ -38,7 +44,7 @@ function EmiCalculator() {
 				name="" 
 				id="" 
 				value={fee} 
-				onChange={(event)=>setFee(event.target.value)}
+				onChange={(event) => setFee (event.target.value)}
 				placeholder='Proecessing fees (in %)'
 			/>
 
@@ -47,7 +53,22 @@ function EmiCalculator() {
 				type="range"
 				name=""
 				id="" 
-      
+				className="slider"
+				min={0}
+				max={10}
+				value={downpayment}
+				onChange={updateEmi} 
+			/>
+			<span> Loan Payment Per Month </span>
+			<input 
+				type="range"
+				name=""
+				id="" 
+				className="slider"
+				min={0}
+				max={10}
+				value={emi}
+				onChange={updateDownpayment} 
 			/>
         
 		</>
@@ -55,5 +76,4 @@ function EmiCalculator() {
 
 	);
 }
-
 export default EmiCalculator;

@@ -13,7 +13,7 @@ module.exports = {
 				"node": true
 			},
 			"files": [
-				".eslintrc.{js,cjs}"
+				".eslintrc.{js,cjs,jsx}"
 			],
 			"parserOptions": {
 				"sourceType": "script"
@@ -25,16 +25,21 @@ module.exports = {
 		"sourceType": "module"
 	},
 	"plugins": [
-		"react"
+		"react",
+		"@stylistic/js"
 	],
 	"rules": {
-		"indent": [
-			"error",
-			"tab"
-		],
+		// "indent": [
+		// "error",
+		// "tab"
+		// ],
+		"@stylistic/js/indent": [ "error", "tab" ],
+		"@stylistic/js/array-bracket-spacing": [ "error", "always" ],
+		"@stylistic/js/block-spacing": "error",
+		"@stylistic/js/arrow-spacing": [ "error", { "before": true, "after": true } ],
+		"@stylistic/js/function-call-spacing": [ "error", "always" ],
 		"linebreak-style": [
-			"error",
-			"windows"
+			"error"
 		],
 		"quotes": [
 			"error",
