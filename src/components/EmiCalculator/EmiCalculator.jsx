@@ -10,6 +10,13 @@ function EmiCalculator() {
 	const [ tenure,setTenure ]=useState (12);
 	const [ emi,setEmi ]=useState (0);
 	const updateEmi = () => {
+		// first have to check if the cost is there or not
+		if(!cost){
+			return ;
+		}
+		else{
+			const downPayment=Number()
+		}
 		
 	};
 	const updateDownpayment=() => {
@@ -55,7 +62,7 @@ function EmiCalculator() {
 				id="" 
 				className="slider"
 				min={0}
-				max={10}
+				max={cost}
 				value={downpayment}
 				onChange={updateEmi} 
 			/>
@@ -65,10 +72,10 @@ function EmiCalculator() {
 				name=""
 				id="" 
 				className="slider"
-				min={0}
-				max={10}
+				min={calculateEMI(cost)}
+				max={calculateEMI(0)}
 				value={emi}
-				onChange={updateDownpayment} 
+				onChange={updateDownpayment} // on change will update the downpayment
 			/>
         
 		</>

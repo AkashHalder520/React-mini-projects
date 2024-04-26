@@ -38,9 +38,6 @@ module.exports = {
 		"@stylistic/js/block-spacing": "error",
 		"@stylistic/js/arrow-spacing": [ "error", { "before": true, "after": true } ],
 		"@stylistic/js/function-call-spacing": [ "error", "always" ],
-		"linebreak-style": [
-			"error"
-		],
 		"quotes": [
 			"error",
 			"double"
