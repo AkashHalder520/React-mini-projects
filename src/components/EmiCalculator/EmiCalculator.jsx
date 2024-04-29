@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import "./EmiCalculator.scss";
 function EmiCalculator() {
 
 	const [ cost,setCost ]=useState (0);
@@ -15,12 +15,16 @@ function EmiCalculator() {
 			return ;
 		}
 		else{
-			const downPayment=Number()
+			const downPayment=Number ();
 		}
 		
 	};
 	const updateDownpayment=() => {
 		
+	};
+
+	const calculateEMI=() => {
+
 	};
 	return (
 		<>
@@ -56,27 +60,33 @@ function EmiCalculator() {
 			/>
 
 			<span> Down Payment </span>
-			<input 
-				type="range"
-				name=""
-				id="" 
-				className="slider"
-				min={0}
-				max={cost}
-				value={downpayment}
-				onChange={updateEmi} 
-			/>
+			<div>
+
+				<input 
+					type="range"
+					name=""
+					id="" 
+					className="slider"
+					min={0}
+					max={cost}
+					value={downpayment}
+					onChange={updateEmi} 
+				/>
+			</div>
+
 			<span> Loan Payment Per Month </span>
 			<input 
 				type="range"
 				name=""
 				id="" 
 				className="slider"
-				min={calculateEMI(cost)}
-				max={calculateEMI(0)}
+				min={calculateEMI (cost)}
+				max={calculateEMI (0)}
 				value={emi}
 				onChange={updateDownpayment} // on change will update the downpayment
 			/>
+
+
         
 		</>
 
