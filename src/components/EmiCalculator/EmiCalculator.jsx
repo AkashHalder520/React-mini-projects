@@ -28,65 +28,77 @@ function EmiCalculator() {
 	};
 	return (
 		<>
-			<div className='title'>EmiCalculator</div>
-			<span className=''>Total cost of asset</span>
-			<input 
-				type="number" 
-				name="" 
-				id="" 
-				value={cost} 
-				onChange={(event) => setCost (event.target.value)}
-				placeholder='Please enter the total cost of the asset'
-			/>
+			<div className="emicalculator">
 
-			<span className=''>Interest Rate</span>
-			<input 
-				type="number" 
-				name="" 
-				id="" 
-				value={interest} 
-				onChange={(event) => setInterst (event.target.value)}
-				placeholder='Interest Rates in percentage'
-			/>
+				<div className='title'>EmiCalculator</div>
+				<span className=''>Total cost of asset</span>
+				<input 
+					type="number" 
+					name="" 
+					id="" 
+					value={cost} 
+					onChange={(event) => setCost (event.target.value)}
+					placeholder='Please enter the total cost of the asset'
+				/>
 
-			<span className=''>Proecessing fees (in %) </span>
-			<input 
-				type="number" 
-				name="" 
-				id="" 
-				value={fee} 
-				onChange={(event) => setFee (event.target.value)}
-				placeholder='Proecessing fees (in %)'
-			/>
+				<span className=''>Interest Rate</span>
+				<input 
+					type="number" 
+					name="" 
+					id="" 
+					value={interest} 
+					onChange={(event) => setInterst (event.target.value)}
+					placeholder='Interest Rates in percentage'
+				/>
 
-			<span> Down Payment </span>
-			<div>
+				<span className=''>Proecessing fees (in %) </span>
+				<input 
+					type="number" 
+					name="" 
+					id="" 
+					value={fee} 
+					onChange={(event) => setFee (event.target.value)}
+					placeholder='Proecessing fees (in %)'
+				/>
 
+				<span> Down Payment </span>
+				<div>
+
+					<input 
+						type="range"
+						name=""
+						id="" 
+						className="slider"
+						min={0}
+						max={cost}
+						value={downpayment}
+						onChange={updateEmi} 
+					/>
+				</div>
+				<div className="lables">
+					<label htmlFor="">0%</label>
+					<b>{downpayment}</b>
+					<label htmlFor="">100%</label>
+				</div>
+				<span> Loan Payment Per Month </span>
 				<input 
 					type="range"
 					name=""
 					id="" 
 					className="slider"
-					min={0}
-					max={cost}
-					value={downpayment}
-					onChange={updateEmi} 
+					min={calculateEMI (cost)}
+					max={calculateEMI (0)}
+					value={emi}
+					onChange={updateDownpayment} // on change will update the downpayment
 				/>
+				<div className="lables">
+					<label htmlFor="">{calculateEMI (cost)}</label>
+					<b>{downpayment}</b>
+					<label htmlFor="">{calculateEMI (0)}</label>
+				</div>
+
+
 			</div>
-
-			<span> Loan Payment Per Month </span>
-			<input 
-				type="range"
-				name=""
-				id="" 
-				className="slider"
-				min={calculateEMI (cost)}
-				max={calculateEMI (0)}
-				value={emi}
-				onChange={updateDownpayment} // on change will update the downpayment
-			/>
-
-
         
 		</>
 
