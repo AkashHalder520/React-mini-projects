@@ -1,0 +1,41 @@
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  .question {
+    background: #14f0e5;
+    padding: 15px;
+    border-bottom: 1px solid #38cbdf;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+    &:hover {
+      background: #e0e0e0;
+    }
+  
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .answer {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #555;
+    background-color: rgb(207, 204, 204);
+    transition: max-height 0.3s ease-in-out;
+    display: none;
+    &.open{
+        display: block;
+    }
+  }
+  
+  
+}

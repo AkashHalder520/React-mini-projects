@@ -1,0 +1,30 @@
+{
+    "faq": [
+      {
+        "id": 1,
+        "question": "What is your return policy?",
+        "answer": "You can return any item within 30 days of purchase as long as it is in its original condition and packaging."
+      },
+      {
+        "id": 2,
+        "question": "Do you offer international shipping?",
+        "answer": "Yes, we ship internationally. Shipping costs and delivery times vary based on the destination."
+      },
+      {
+        "id": 3,
+        "question": "How can I track my order?",
+        "answer": "Once your order is shipped, you will receive a tracking number via email to monitor your package's status."
+      },
+      {
+        "id": 4,
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards, PayPal, and Apple Pay."
+      },
+      {
+        "id": 5,
+        "question": "How do I contact customer support?",
+        "answer": "You can reach our support team via email at support@example.com or call us at +1 234 567 890."
+      }
+    ]
+  }
+  
