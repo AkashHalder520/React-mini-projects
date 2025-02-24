@@ -6,6 +6,7 @@ import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator"
 import CurrencyConverter from "./components/CurrencyConverter/CurrencyConverter";
 import Pagination from "./components/Pagination/Pagination";
 import Accordion from "./components/Accordion/Accordion";
+import TabForm from "./components/TabForm/TabForm";
 // import EmiCalculator from "./components/EmiCalculator/EmiCalculator";
 
 const AppRoutes = () => (
@@ -16,6 +17,7 @@ const AppRoutes = () => (
 		<Route path="/Pagination" element={<Pagination />}/>
 		{/* <Route path="/EmiCalculator" element={<EmiCalculator />}/> */}
 		<Route path="/Accordion" element={<Accordion/>}/>
+		<Route path="/TabForm" element={<TabForm/>}/>
 	</Routes>
 );
 

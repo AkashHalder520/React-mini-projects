@@ -27,8 +27,13 @@ const projects = [
 	},
 	{
 		title:"Accordion",
-		description:"simple accordion",
+		description:"simple accordion and multiple acoordion",
 		link: "/Accordion"
+	},
+	{
+		title:"TabForm",
+		description:"TabForm",
+		link: "/TabForm"
 	}
 	// Add more projects here
 ];
