@@ -1,78 +1,226 @@
 .tabForm {
-    border: 1px solid black;
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    min-height: 200px;
+  border: 1px solid black;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  min-height: 200px;
 
-    .headingclass {
+  .headingclass {
+    display: flex;
+
+    .heading {
+      padding: 10px;
+      border: 1px solid black;
+      cursor: pointer;
+
+      &.active {
+        background-color: aqua;
+      }
+    }
+  }
+
+  .activetabDiasplay {
+    .Profile {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+
+      label {
         display: flex;
+        align-items: center;
+        margin: 5px 0;
+        font-size: 16px;
+        color: #333;
+        cursor: pointer;
 
-        .heading {
-            padding: 10px;
-            border: 1px solid black;
-            cursor: pointer;
-            &.active{
-            background-color: aqua;
-            }
+        input[type="radio"] {
+          margin-right: 8px;
         }
-    }
-    .activetabDiasplay{
-        .Profile{
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          
-            input[type="text"],
-            input[type="email"],
-            input[type="tel"] {
-              width: 100%;
-              padding: 10px;
-              margin: 8px 0;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              font-size: 16px;
-              transition: border-color 0.3s;
-          
-              &:focus {
-                border-color: #007bff;
-                outline: none;
-              }
-            }
-          
-            label {
-              display: flex;
-              align-items: center;
-              margin: 5px 0;
-              font-size: 16px;
-              color: #333;
-              cursor: pointer;
-          
-              input[type="radio"] {
-                margin-right: 8px;
-              }
-            }
-          
-            button {
-              width: 100%;
-              padding: 12px;
-              margin-top: 15px;
-              background: #007bff;
-              color: #fff;
-              font-size: 16px;
-              font-weight: bold;
-              border: none;
-              border-radius: 4px;
-              cursor: pointer;
-              transition: background 0.3s ease;
-          
-              &:hover {
-                background: #0056b3;
-              }
-            }
+      }
+
+      .submitBtn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        background: #007bff;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #0056b3;
         }
+      }
     }
+
+    .interests {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: Arial, sans-serif;
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 16px;
+          cursor: pointer;
+          user-select: none;
+
+          input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.3s ease;
+
+            &:hover {
+              border-color: #0056b3;
+            }
+
+            &:checked {
+              background-color: #007bff;
+              border-color: #007bff;
+
+              &::after {
+                content: "✔";
+                font-size: 14px;
+                color: white;
+                font-weight: bold;
+                position: absolute;
+              }
+            }
+          }
+        }
+
+        .submitBtn {
+          width: 100%;
+          padding: 12px;
+          margin-top: 15px;
+          background: #007bff;
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: #0056b3;
+          }
+        }
+      }
+    }
+
+    .user-profile {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
+      h2 {
+          text-align: center;
+          font-size: 24px;
+          color: #333;
+          margin-bottom: 15px;
+      }
+  
+      ul {
+          list-style: none;
+          padding: 0;
+  
+          li {
+              font-size: 16px;
+              color: #555;
+              padding: 8px 0;
+              border-bottom: 1px solid #ddd;
+  
+              &:last-child {
+                  border-bottom: none;
+              }
+  
+              strong {
+                  font-weight: bold;
+                  color: #000;
+              }
+          }
+      }
+  
+      .interests {
+          margin-top: 8px;
+          padding-left: 15px;
+  
+          li {
+              font-size: 14px;
+              color: #444;
+              padding: 5px 0;
+              border-bottom: none;
+          }
+      }
+  }
+  
+
+  }
+  .BackBtn{
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #807a7a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #000000;
+    }
+    &:disabled {
+      background: #ccc;  // Light grey color for disabled state
+      cursor: not-allowed;  // Shows "not-allowed" cursor
+      opacity: 0.6;  // Slight transparency to indicate disabled
+  }
+  }
 }

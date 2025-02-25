@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
+import { useTabContext } from "./TabContext";
 
 const Profile = ({data,setdata}) => {
 	const [ formValue,setformValue ]=useState (data);
+	const { nextTab} = useTabContext ();
 
 	const handleChange = (e) => {
 		setformValue ((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
@@ -11,6 +13,7 @@ const Profile = ({data,setdata}) => {
 		e.preventDefault ();
 		setdata (formValue); // Update the main data state on submit
 		console.log ("Updated Data:", formValue);
+		nextTab ();
 	};
 
 
@@ -77,7 +80,7 @@ const Profile = ({data,setdata}) => {
         Other
 			</label>
 
-			<button type="submit">Submit</button>
+			<button className="submitBtn"type="submit">Submit & Contunue </button>
 		</form>
 	);
 };
